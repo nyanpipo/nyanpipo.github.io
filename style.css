@@ -1,0 +1,53 @@
+:root {
+  --ink: #1d3557;      /* 見出し・ロゴ：信頼感のある藍 */
+  --text: #24282f;
+  --muted: #5d6573;
+  --paper: #f5f7fa;
+  --card: #ffffff;
+  --line: #d8dee7;
+  --eye: #e0a526;      /* 猫の目の琥珀色。強調は1か所だけに使う */
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+a { color: var(--ink); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--eye); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+
+header.site { background: var(--ink); color: #fff; }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: .6rem; color: #fff; text-decoration: none; font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
+.logo svg { width: 34px; height: 34px; flex: none; }
+nav.site { display: flex; flex-wrap: wrap; gap: .2rem 1.1rem; }
+nav.site a { color: #dfe7f2; text-decoration: none; font-size: .9rem; white-space: nowrap; }
+nav.site a[aria-current="page"] { color: #fff; border-bottom: 2px solid var(--eye); }
+
+.hero { padding: 3.2rem 0 2.4rem; }
+.hero h1 { font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif; font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.35; color: var(--ink); margin: 0 0 1rem; }
+.hero p { font-size: 1.05rem; color: var(--muted); margin: 0; max-width: 34em; }
+
+main { padding-bottom: 3rem; }
+h1.page { font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif; color: var(--ink); font-size: 1.7rem; line-height: 1.4; margin: 2.4rem 0 .4rem; }
+.updated { color: var(--muted); font-size: .88rem; margin: 0 0 1.6rem; }
+h2 { font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif; color: var(--ink); font-size: 1.2rem; margin: 2.2rem 0 .6rem; padding-left: .7rem; border-left: 4px solid var(--eye); line-height: 1.5; }
+p, li { max-width: 40em; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: .3rem 0; }
+
+.promise { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.5rem; margin: 1.8rem 0; }
+.promise h2 { margin-top: 0; }
+
+.contact { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.5rem; margin-top: 2.4rem; }
+.contact p { margin: .2rem 0; }
+.mail { font-weight: 700; word-break: break-all; }
+
+footer.site { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding: 1.4rem 0 2.4rem; }
+footer.site a { color: var(--muted); margin-right: 1rem; }
